@@ -295,6 +295,12 @@
  <Reference Include="DOTweenPro">
  <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
+ <Reference Include="BehaviorDesignerRuntime">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Behavior Designer/Runtime/Core/BehaviorDesignerRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="BehaviorDesignerEditor">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Behavior Designer/Editor/Core/BehaviorDesignerEditor.dll</HintPath>
+ </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/2019.4.7/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>

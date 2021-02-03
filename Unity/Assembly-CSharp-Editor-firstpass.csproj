@@ -349,6 +349,12 @@
  <Reference Include="DOTweenPro">
  <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
+ <Reference Include="BehaviorDesignerRuntime">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Behavior Designer/Runtime/Core/BehaviorDesignerRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="BehaviorDesignerEditor">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Behavior Designer/Editor/Core/BehaviorDesignerEditor.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/git/SoldProject/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
@@ -719,6 +725,14 @@
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
       <Project>{686145E0-A51B-685E-EF99-A1034C8B63AB}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="BehaviorDesigner.Editor.csproj">
+      <Project>{4A3DA78B-913E-0728-2FF3-AF6B3741DAD2}</Project>
+      <Name>BehaviorDesigner.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="BehaviorDesigner.Runtime.csproj">
+      <Project>{4F5EE9CD-D389-CAE7-5966-BCF2ED15CE9E}</Project>
+      <Name>BehaviorDesigner.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
