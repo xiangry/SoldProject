@@ -734,6 +734,22 @@
       <Project>{4F5EE9CD-D389-CAE7-5966-BCF2ED15CE9E}</Project>
       <Name>BehaviorDesigner.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{D9C6BD4E-98B1-2840-CAD8-6AE288C4C16E}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{BD0AF8D8-EC98-6494-F316-0C1F7B74AA00}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{D5CD548B-8237-CD72-F713-6DFBAFBAD64C}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{4EC8895F-D7DE-85C0-2D91-582735462C8C}</Project>
+      <Name>spine-unity-examples-editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
