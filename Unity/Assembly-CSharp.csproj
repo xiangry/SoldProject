@@ -309,6 +309,15 @@
  <Reference Include="Sirenix.Serialization.Config">
  <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>D:/git/SoldProject/Unity/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/2019.4.7/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>
@@ -665,6 +674,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{2662B409-6332-1E56-D797-C9025C53BDD6}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{E387569F-725F-F5C8-517B-584709B7D5D8}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
