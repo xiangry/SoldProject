@@ -66,7 +66,7 @@ namespace Test.Room
         public int width;
         public int height;
 
-        public TileData[][] allTiles;
+        public TileData[,] allTiles;
 
         public List<PathData> allPaths = new List<PathData>();
 
@@ -95,13 +95,12 @@ namespace Test.Room
 
         private void ResetMapData()
         {
-            allTiles = new TileData[width][];
+            allTiles = new TileData[width, height];
             for (int i = 0; i < width; i++)
             {
-                allTiles[i] = new TileData[height];
                 for (int j = 0; j < height; j++)
                 {
-                    allTiles[i][j] = new TileData(i, j);
+                    allTiles[i,j] = new TileData(i, j);
                 }
             }
             allPaths.Clear();
@@ -115,10 +114,10 @@ namespace Test.Room
         public List<TileData> NeighborRooms(int x, int y)
         {
             var tiles = new List<TileData>();
-            if (IsRoom(x + 1, y)) tiles.Add(allTiles[x + 1][ y]);
-            if (IsRoom(x - 1, y)) tiles.Add(allTiles[x - 1][ y]);
-            if (IsRoom(x, y + 1)) tiles.Add(allTiles[x][ y + 1]);
-            if (IsRoom(x, y - 1)) tiles.Add(allTiles[x][y - 1]);
+            if (IsRoom(x + 1, y)) tiles.Add(allTiles[x + 1,y]);
+            if (IsRoom(x - 1, y)) tiles.Add(allTiles[x - 1,y]);
+            if (IsRoom(x, y + 1)) tiles.Add(allTiles[x,y + 1]);
+            if (IsRoom(x, y - 1)) tiles.Add(allTiles[x,y - 1]);
             return tiles;
         }
 
@@ -130,10 +129,10 @@ namespace Test.Room
         public List<TileData> NeighborBlocks(int x, int y)
         {
             var tiles = new List<TileData>();
-            if (IsBlock(x, y + 1)) tiles.Add(allTiles[x][ y + 1]);
-            if (IsBlock(x, y - 1)) tiles.Add(allTiles[x][y - 1]);
-            if (IsBlock(x - 1, y)) tiles.Add(allTiles[x - 1][ y]);
-            if (IsBlock(x + 1, y)) tiles.Add(allTiles[x + 1][ y]);
+            if (IsBlock(x, y + 1)) tiles.Add(allTiles[x, y + 1]);
+            if (IsBlock(x, y - 1)) tiles.Add(allTiles[x,y - 1]);
+            if (IsBlock(x - 1, y)) tiles.Add(allTiles[x - 1, y]);
+            if (IsBlock(x + 1, y)) tiles.Add(allTiles[x + 1, y]);
             return tiles;
         }
 
@@ -152,12 +151,12 @@ namespace Test.Room
         
         public bool IsBlock(int x, int y)
         {
-            return IsValidTile(x, y) && !allTiles[x][y].isRoom;
+            return IsValidTile(x, y) && !allTiles[x,y].isRoom;
         }
 
         public bool IsRoom(int x, int y)
         {
-            return IsValidTile(x, y) && allTiles[x][y].isRoom;
+            return IsValidTile(x, y) && allTiles[x,y].isRoom;
         }
 
         public void Walk(Action<TileData> call)
@@ -166,7 +165,7 @@ namespace Test.Room
             {
                 for (int j = 0; j < height; j++)
                 {
-                    call.Invoke(allTiles[i][j]);
+                    call.Invoke(allTiles[i,j]);
                 }
             }
         }
@@ -174,7 +173,7 @@ namespace Test.Room
         public TileData DataAt(int x, int y)
         {
             if (IsValidTile(x, y))
-                return allTiles[x][y];
+                return allTiles[x,y];
             return null;
         }
 
@@ -185,7 +184,7 @@ namespace Test.Room
 
         public void SetStartPoint(int x, int y)
         {
-            StartPoint = allTiles[x][y];
+            StartPoint = allTiles[x,y];
             StartPoint.step = 0;
             allPaths.Clear();
             allPaths.Add(new PathData(StartPoint));
@@ -286,4 +285,5 @@ namespace Test.Room
 //            });
         }
     }
+    
 }
